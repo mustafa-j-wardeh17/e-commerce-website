@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*----------------------- Main Styles ---------------------------*/
+/*flex*/
+.flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-grow{
+    flex-grow: 1;
+}
+/*align-items*/
+.align-center{
+    align-items: center;
+}
+.align-start{
+    align-items: start;
+}
+.align-end{
+    align-items: end;
+}
+/*justify-content*/
+.justify-between{
+    justify-content: space-between;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-center{
+    justify-content: center;
+}
+/*text*/
+.text-decoration{
+    text-decoration: none;
+}
+.text-capitalize{
+    text-transform: capitalize;
+}
+.text-center{
+    text-align: center;
+}
+/*ul*/
+.list-none{
+    list-style: none;
+}
+
+/*colors*/
+.color-white{
+    color: white;
+}
+.color-black{
+    color: black;
+}
+
+/*gap*/
+.gap-10{
+    gap: 10px;
+}
+.gap-20{
+    gap: 20px;
+}
+.gap-30{
+    gap: 30px;
+}
+.gap-40{
+    gap: 40px;
+}
+
+/*circle*/
+.rounded {
+    border-radius:50%;
+}
+
+/*font*/
+
+.font-xs{
+    font-size:.5rem;
+}
+
+.font-s{
+    font-size: .7rem;
+}
+.font-m{
+    font-size: 1.2rem;
+}
+.font-l{
+    font-size: 1.5rem;
+}
+.font-xl{
+    font-size: 2rem;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.app-container{
+    position: relative;
+}
+
+/*position*/
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
+}
+
+
+
+.m-20{
+    margin-bottom: 20px;
+}
+.m-30{
+    margin-bottom: 30px;
+}
+.m-40{
+    margin-bottom: 40px;
+}
+.m-50{
+    margin-bottom: 50px;
+}
+.m-60{
+    margin-bottom: 60px;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+/*----------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+.app-container{
+    min-height: 100vh;
+    overflow: hidden;
+}
