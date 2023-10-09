@@ -68,10 +68,14 @@
 }
 
 
+.user-i-icon {
+    color: black;
+}
 
 .menu-icon {
     display: none;
 }
+
 
 @media screen and (max-width:1350px) {
     .cintainer-header {
@@ -87,10 +91,18 @@
     }
 }
 
-@media screen and (max-width:1150px) {
+@media only screen and (max-width:1150px) {
+    .menu-icon {
+        display: block;
+    }
 
-    .header .header-content {
+    .header-content {
         display: none;
+    }
+
+    .mobile {
+        display: block;
+        flex-direction: column;
         position: absolute;
         top: 0;
         right: 0;
@@ -98,6 +110,14 @@
         height: 100vh;
         background: #ffffff;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
     }
 
     .header-content {
@@ -132,9 +152,11 @@
         margin: 0 10px;
         padding: 30px 0;
     }
-    .header-image{
+
+    .header-image {
         margin-top: 20px;
     }
+
     .x-close {
         display: block;
         position: absolute;
@@ -169,7 +191,8 @@
         border-radius: 50%;
         object-fit: cover;
     }
-    .user-icon{
+
+    .user-icon {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -181,7 +204,8 @@
         color: black;
         margin-left: 10px;
     }
-    .user-icon i{
+
+    .user-icon i {
         font-size: 40px;
     }
 
@@ -196,11 +220,6 @@
         text-align: center;
         width: 100%;
     }
-
-    .menu-icon {
-        display: block;
-    }
-
 
     .hide {
         display: none;
