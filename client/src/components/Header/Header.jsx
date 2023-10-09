@@ -39,21 +39,21 @@ function Header() {
           <div id='header' className={` header-content flex gap-40 align-center`}>
             <ul className='header-list list-none flex align-center gap-20 font-m'>
               <Link className='link-home flex justify-center' to={'/'}>
-                <li onClick={() => closemenu()}  className='header-list-item home-first font-500 text-decoration color-black'>Home</li>
+                <li onClick={() => closemenu()} className='header-list-item home-first font-500 text-decoration color-black'>Home</li>
               </Link>
               <Link className='link-home flex justify-center' to={'/'}>
-                <li onClick={() => closemenu()}  className='header-list-item font-500 text-decoration color-black'>Pages</li>
+                <li onClick={() => closemenu()} className='header-list-item font-500 text-decoration color-black'>Pages</li>
               </Link>
               <Link className='link-home flex justify-center' to={'/'}>
-                <li  onClick={() => closemenu()} className='header-list-item font-500 text-decoration color-black'>Shop</li>
-              </Link>
-              <Link className='link-home flex justify-center' to={'/'}>
-
-                <li  onClick={() => closemenu()} className='header-list-item font-500 text-decoration color-black'>Element</li>
+                <li onClick={() => closemenu()} className='header-list-item font-500 text-decoration color-black'>Shop</li>
               </Link>
               <Link className='link-home flex justify-center' to={'/'}>
 
-                <li onClick={() => closemenu()}  className='header-list-item font-500 text-decoration color-black'>Blog</li>
+                <li onClick={() => closemenu()} className='header-list-item font-500 text-decoration color-black'>Element</li>
+              </Link>
+              <Link className='link-home flex justify-center' to={'/'}>
+
+                <li onClick={() => closemenu()} className='header-list-item font-500 text-decoration color-black'>Blog</li>
               </Link>
               <Link to={'/cart'}>
                 <div className='header-image cart font-m'>
@@ -62,16 +62,17 @@ function Header() {
                 </div>
               </Link>
             </ul>
-            <Link to={'/login'}>
             <p id='closeBtn' onClick={() => closemenu()} className='x-close'>x</p>
+
+            <Link to={'/login'}>
               {user ?
                 <div className=' flex justify-center'>
-                  <div className='user-info flex gap-10 align-center'>
+                  <div className='user-info flex gap-10 align-center' onClick={() => closemenu()}>
                     <img className='user-image' src={user.image} />
-                    <p className='userName'>{user.name}</p>
+                    <p className='userName' >{user.name}</p>
                   </div>
                 </div>
-                : <img className='user-image' src={githubLogo} alt='cc' />
+                : <img className='user-image' onClick={() => closemenu()} src={githubLogo} alt='cc' />
               }
             </Link>
           </div>

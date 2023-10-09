@@ -54,7 +54,7 @@ function Cart() {
                       <p id='qty'>{item.quantity}</p>
                       <i onClick={() => dispatch(increamentQuantity(item))} className="fa-solid fa-plus pointer"></i>
                     </div>
-                    <p>${(item.price * item.quantity).toFixed(2)}</p>
+                    <p className='price-item-with-qty'>${(item.price * item.quantity).toFixed(2)}</p>
                   </div>
                   )
                 })

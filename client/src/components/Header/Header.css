@@ -64,6 +64,7 @@
 
 .x-close {
     display: none;
+    cursor: pointer;
 }
 
 
@@ -111,7 +112,7 @@
         align-items: center;
         width: 100%;
         gap: 10px;
-        margin-top: 200px;
+        margin-top: 150px;
     }
 
     .link-home {
@@ -139,18 +140,19 @@
         position: absolute;
         top: 15px;
         right: 15px;
-        font-size: 30px;
-        width: 50px;
-        height: 50px;
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
         text-align: center;
-        border: solid black 3px;
+        border: solid rgba(53, 52, 52, 0.829) 2px;
         color: black;
-        font-weight: bolder;
+        font-weight: 600;
+        z-index: 999;
     }
 
     .user-info {
         position: absolute;
-        top: 80px;
+        top: 10px;
         left: 0;
         display: flex;
         text-align: center;
@@ -169,7 +171,7 @@
     }
 
     .userName {
-        font-size: 18px;
+        font-size: 12px;
         text-decoration: none;
         color: black;
         font-weight: 700;
