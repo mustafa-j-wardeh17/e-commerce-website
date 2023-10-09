@@ -46,10 +46,11 @@
 
 .userName {
     text-wrap: nowrap;
+    text-transform: uppercase;
+    text-decoration: none;
     font-size: 12px;
     font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: underline;
+    color: gray;
 }
 
 .user-image {
@@ -65,12 +66,7 @@
     display: none;
 }
 
-.userName {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    color: gray;
-}
+
 
 .menu-icon {
     display: none;

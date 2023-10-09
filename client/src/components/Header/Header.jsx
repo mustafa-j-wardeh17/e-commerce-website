@@ -39,21 +39,21 @@ function Header() {
           <div id='header' className={` header-content flex gap-40 align-center`}>
             <ul className='header-list list-none flex align-center gap-20 font-m'>
               <Link className='link-home flex justify-center' to={'/'}>
-                <li className='header-list-item home-first font-500 text-decoration color-black'>Home</li>
+                <li onClick={() => closemenu()}  className='header-list-item home-first font-500 text-decoration color-black'>Home</li>
               </Link>
               <Link className='link-home flex justify-center' to={'/'}>
-                <li className='header-list-item font-500 text-decoration color-black'>Pages</li>
+                <li onClick={() => closemenu()}  className='header-list-item font-500 text-decoration color-black'>Pages</li>
               </Link>
               <Link className='link-home flex justify-center' to={'/'}>
-                <li className='header-list-item font-500 text-decoration color-black'>Shop</li>
-              </Link>
-              <Link className='link-home flex justify-center' to={'/'}>
-
-                <li className='header-list-item font-500 text-decoration color-black'>Element</li>
+                <li  onClick={() => closemenu()} className='header-list-item font-500 text-decoration color-black'>Shop</li>
               </Link>
               <Link className='link-home flex justify-center' to={'/'}>
 
-                <li className='header-list-item font-500 text-decoration color-black'>Blog</li>
+                <li  onClick={() => closemenu()} className='header-list-item font-500 text-decoration color-black'>Element</li>
+              </Link>
+              <Link className='link-home flex justify-center' to={'/'}>
+
+                <li onClick={() => closemenu()}  className='header-list-item font-500 text-decoration color-black'>Blog</li>
               </Link>
               <Link to={'/cart'}>
                 <div className='header-image cart font-m'>
