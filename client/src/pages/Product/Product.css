@@ -59,3 +59,29 @@
     font-size: 20px;
     color: gray;
 }
+
+
+@media screen and (max-width:800px){
+    .product-container{
+        margin-bottom: 320px;
+        flex-direction: column;
+    }
+    .product-image{
+        width: 100%;
+    }
+    .product-details{
+        width: 100%;
+    }
+    .quantity-details{
+        display: flex;
+        gap: 20px;
+    }
+    .quantity{
+        display: flex;
+        gap: 10px;
+        width: 60%;
+    }
+    .addtocart-details{
+        width: 120px;
+    }
+}
