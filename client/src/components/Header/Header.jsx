@@ -62,7 +62,7 @@ function Header() {
                 </div>
               </Link>
             </ul>
-            <p id='closeBtn' onClick={() => closemenu()} className='x-close'>x</p>
+            <p id='closeBtn' onClick={() => closemenu()} className='x-close'><i className="fa-solid fa-xmark"></i></p>
 
             <Link to={'/login'}>
               {user ?
@@ -72,7 +72,14 @@ function Header() {
                     <p className='userName' >{user.name}</p>
                   </div>
                 </div>
-                : <img className='user-image' onClick={() => closemenu()} src={githubLogo} alt='cc' />
+                :
+                <div className='user-info flex gap-10 align-center' onClick={() => closemenu()}>
+                  <div className='user-icon'>
+                    <i className='fa-solid fa-user ' onClick={() => closemenu()} ></i>
+                  </div>
+                  <p className='userName' >Login Please</p>
+                </div>
+
               }
             </Link>
           </div>
