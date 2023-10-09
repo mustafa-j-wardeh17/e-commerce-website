@@ -4,24 +4,24 @@ import './Header.css'
 import { useSelector } from 'react-redux'
 import { useState } from 'react'
 function Header() {
-  
+
   const product = useSelector(state => state.bazar.productData)
   const user = useSelector(state => state.bazar.userInfo)
-  
-  const [MenuState,SetMenuState] =useState('hide')
-  const [HideMenuButton,SetHideMenuButton] =useState('show')
-  const menuhandler =()=>{
-    document.getElementById('menuBtn').style.display='none'
 
-    document.getElementById('header').style.display='block'
-    document.getElementById('closeBtn').style.display='block'
+  const [MenuState, SetMenuState] = useState('hide')
+  const [HideMenuButton, SetHideMenuButton] = useState('show')
+  const menuhandler = () => {
+    document.getElementById('menuBtn').style.display = 'none'
+
+    document.getElementById('header').style.display = 'block'
+    document.getElementById('closeBtn').style.display = 'block'
   }
-  
-  const closemenu =()=>{
-    document.getElementById('menuBtn').style.display='block'
 
-    document.getElementById('header').style.display='none'
-    document.getElementById('closeBtn').style.display='none'
+  const closemenu = () => {
+    document.getElementById('menuBtn').style.display = 'block'
+
+    document.getElementById('header').style.display = 'none'
+    document.getElementById('closeBtn').style.display = 'none'
   }
 
   return (
@@ -42,18 +42,18 @@ function Header() {
                 <li className='header-list-item home-first font-500 text-decoration color-black'>Home</li>
               </Link>
               <Link className='link-home flex justify-center' to={'/'}>
-              <li className='header-list-item font-500 text-decoration color-black'>Pages</li>
+                <li className='header-list-item font-500 text-decoration color-black'>Pages</li>
               </Link>
               <Link className='link-home flex justify-center' to={'/'}>
-              <li className='header-list-item font-500 text-decoration color-black'>Shop</li>
-              </Link>
-              <Link className='link-home flex justify-center' to={'/'}>
-
-              <li className='header-list-item font-500 text-decoration color-black'>Element</li>
+                <li className='header-list-item font-500 text-decoration color-black'>Shop</li>
               </Link>
               <Link className='link-home flex justify-center' to={'/'}>
 
-              <li className='header-list-item font-500 text-decoration color-black'>Blog</li>
+                <li className='header-list-item font-500 text-decoration color-black'>Element</li>
+              </Link>
+              <Link className='link-home flex justify-center' to={'/'}>
+
+                <li className='header-list-item font-500 text-decoration color-black'>Blog</li>
               </Link>
               <Link to={'/cart'}>
                 <div className='header-image cart font-m'>
@@ -63,17 +63,17 @@ function Header() {
               </Link>
             </ul>
             <Link to={'/login'}>
-                  {user ?
-                  <div className=' flex justify-center'>
-                    <p id='closeBtn' onClick={()=>closemenu()} className='x-close'>x</p>
-                    <div className='user-info flex gap-10 align-center'>
-                      <img className='user-image' src={user.image} />
-                      <p className='userName'>{user.name}</p>
-                    </div>
-                    </div>
-                    : <img className='user-image'  src={githubLogo} alt='cc' />
-                  }
-              </Link>
+            <p id='closeBtn' onClick={() => closemenu()} className='x-close'>x</p>
+              {user ?
+                <div className=' flex justify-center'>
+                  <div className='user-info flex gap-10 align-center'>
+                    <img className='user-image' src={user.image} />
+                    <p className='userName'>{user.name}</p>
+                  </div>
+                </div>
+                : <img className='user-image' src={githubLogo} alt='cc' />
+              }
+            </Link>
           </div>
         </div>
       </div>

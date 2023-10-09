@@ -188,8 +188,8 @@
         /* margin-bottom: 500px; */
     }
     .CardProduct{
-        width: 250px;
-        height: 400px;
+        width: 200px;
+        height: 300px;
         border-radius: 4px;
         overflow: hidden;
         box-shadow: rgba(149, 157, 165, 0.13) 0px 8px 24px;
@@ -243,5 +243,11 @@
         position: relative;
         z-index: 50;
         padding: 5px 0;
+    }
+}
+
+@media screen and (max-width:600px){
+    .shop-items{
+        margin-bottom: 320px;
     }
 }
