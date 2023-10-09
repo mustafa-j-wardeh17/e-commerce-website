@@ -32,11 +32,11 @@ function CardProduct({ item }) {
                     <img src={item.image} alt={item.title} />
                 </div>
                 <div className='card-content flex flex-column'>
-                    <div className='flex justify-between relative'>
-                        <h2 className='card-title  bold'>{item.title}</h2>
+                    <div className='flex justify-between  relative '>
+                        <h2 className='card-title  bold text-wrap'>{item.title}</h2>
                         <div className='price-addcart  absolute'>
                             <div className='price-container flex justify-between align-center'>
-                                <div className='price flex '>
+                                <div className='price flex gap-10 '>
                                     <span className='old-price'>${item.oldPrice}</span>
                                     <span className='bold'>${item.price}</span>
                                 </div>

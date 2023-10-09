@@ -65,8 +65,8 @@ function Header() {
             <Link to={'/login'}>
                   {user ?
                   <div className=' flex justify-center'>
-                    <p id='closeBtn' onClick={closemenu} className='x-close'>x</p>
-                    <div className='user-info flex gap-20 align-center'>
+                    <p id='closeBtn' onClick={()=>closemenu()} className='x-close'>x</p>
+                    <div className='user-info flex gap-10 align-center'>
                       <img className='user-image' src={user.image} />
                       <p className='userName'>{user.name}</p>
                     </div>
