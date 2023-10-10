@@ -1,7 +1,12 @@
+import { useSelector } from 'react-redux'
 import CardProduct from './CardProduct/CardProduct'
+import Filter_Products from './Filter Products/Filter_Products'
 import './Products.css'
 // eslint-disable-next-line react/prop-types
 function Products({ products }) {
+
+    const { price_filter, category_filter } = useSelector(state => state.bazar)
+
     return (
         <div className='shop-container color-black flex flex-column align-center '>
             <div className='shop flex flex-column'>
@@ -14,14 +19,42 @@ function Products({ products }) {
                     </p>
                 </div>
             </div>
+
+            <Filter_Products products={products} />
             <div className='shop-items gap-40'>
                 {
                     // eslint-disable-next-line react/prop-types
-                    products.map((item) => 
-                    {
+                    products.filter((product) => {
+                        if (parseInt(price_filter) === 0) {
+                            return product.price > 0
+                        }
+                        else if (parseInt(price_filter) === 100) {
+                            return product.price > 0 && product.price <= 100
+                        }
+                        else if (parseInt(price_filter) === 200) {
+                            return product.price > 100 && product.price <= 200
+                        }
+                        else if (parseInt(price_filter) === 1000) {
+                            return product.price > 200 && product.price <= 1000
+                        }
+                    }).filter((cat) => {
+                        if (category_filter === '') {
+                            return cat.category
+                        }
+                        else if (category_filter === 'men') {
+                            return cat.category === 'men'
+                        }
+                        else if (category_filter === 'women') {
+                            return cat.category === 'women'
+                        }
+                        else if (category_filter === 'kids') {
+                            return cat.category === 'kids'
+                        }
+                    }).map((item) => {
                         return (
-                        <CardProduct key={item._id} item={item} />
-                        )}
+                            <CardProduct key={item._id} item={item} />
+                        )
+                    }
                     )
                 }
             </div>

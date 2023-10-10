@@ -3,7 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     productData: [],
     userInfo: null,
-    total_price: 0
+    total_price: 0,
+    price_filter: 0,
+    category_filter: ''
 }
 
 export const ProductSlice = createSlice({
@@ -55,10 +57,19 @@ export const ProductSlice = createSlice({
             state.userInfo = null;
         },
         // =============== User End here ================
+
+        //---------------- Price Filter ------------------
+
+        Setselectedprice: (state, action) => {
+            state.price_filter = action.payload
+        },
+        Setselectedcategory: (state, action) => {
+            state.category_filter = action.payload
+        },
     },
 })
 
 
-export const { addToCart, increamentQuantity, decrementQuantity, deleteItem, resetCart, addUser, removeUser } = ProductSlice.actions
+export const { addToCart, increamentQuantity, decrementQuantity, deleteItem, resetCart, addUser, removeUser, Setselectedprice, Setselectedcategory } = ProductSlice.actions
 
 export default ProductSlice.reducer

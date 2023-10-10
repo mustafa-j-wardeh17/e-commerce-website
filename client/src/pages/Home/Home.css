@@ -75,6 +75,14 @@
     .banner-images .banner-item img{
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: fill;
+    }
+
+    .banner-buttons i{
+        font-size: 15px;
+        padding: 20px;
+        border: solid black 2px;
+        transition: 1s;
+        cursor: pointer;
     }
 }
